@@ -31,8 +31,19 @@ def remove_last_element(array)
   array
 end
 
+
+
+
+#this is where i continued offline without rspec so i cant see if these work or not
+
+
+
+
+
+
 def remove_first_three_elements(array)
   # Step 1: remove the first three elements
+  array.shift(3)
 
   # Step 2: return the array (because Step 1 returns the values of the elements removed)
   array
@@ -40,26 +51,33 @@ end
 
 def array_concatenation(original, additional)
   # return an array adding the original and additional array together
+  array3 = array + array3
+  #this is defidently not right, oh yeat im sopposed 2 use thoose args... mech ill do it later
 end
 
 def array_difference(original, comparison)
   # return an array of elements from the original array that are not in the comparison array
+  array.filter(original, comparison)
 end
 
 def empty_array?(array)
   # return true if the array is empty
+  array.empty?
 end
 
 def reverse(array)
   # return the reverse of the array
+  array.reverse
 end
 
 def array_length(array)
   # return the length of the array
+  array.length
 end
 
 def include?(array, value)
   # return true if the array includes the value
+  
 end
 
 def join(array, separator)
