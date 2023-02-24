@@ -10,24 +10,24 @@ RSpec.describe 'Method Exercises' do
     end
 
     # remove the 'x' from the line below to unskip the test
-    xit 'returns a lowercase z' do
+    it 'returns a lowercase z' do
       expect(ascii_translator(122)).to eq('z')
     end
 
-    xit 'returns an exclamation mark' do
+    it 'returns an exclamation mark' do
       expect(ascii_translator(33)).to eq('!')
     end
   end
 
   describe 'common sports exercise using #intersection' do
 
-    xit 'returns the common sports' do
+    it 'returns the common sports' do
       current = ['tennis', 'football', 'baseball']
       favorite = ['baseball', 'tennis', 'basketball']
       expect(common_sports(current, favorite)).to eq(['tennis', 'baseball'])
     end
 
-    xit 'returns an empty array when there are no common sports' do
+    it 'returns an empty array when there are no common sports' do
       current = ['tennis', 'football', 'wrestling']
       favorite = ['baseball', 'basketball']
       expect(common_sports(current, favorite)).to eq([])
@@ -36,12 +36,12 @@ RSpec.describe 'Method Exercises' do
 
   describe 'alphabetical list exercise using #sort and #uniq chained' do
 
-    xit 'returns an sorted array removing one duplicate' do
+    it 'returns an sorted array removing one duplicate' do
       games = ['Chess', 'Scrabble', 'Othello', 'Chess']
       expect(alphabetical_list(games)).to eq(['Chess', 'Othello', 'Scrabble'])
     end
     
-    xit 'returns an sorted array removing multiple duplicates' do
+    it 'returns an sorted array removing multiple duplicates' do
       games = ['Monopoly', 'Checkers', 'Risk', 'Checkers', 'Risk', 'Checkers']
       expect(alphabetical_list(games)).to eq(['Checkers', 'Monopoly', 'Risk'])
     end
@@ -49,11 +49,11 @@ RSpec.describe 'Method Exercises' do
 
   describe 'lucky number exercise using a default parameter' do
 
-    xit 'returns a string with the provided argument' do
+    it 'returns a string with the provided argument' do
       expect(lucky_number(42)).to eq("Today's lucky number is 42")
     end
 
-    xit 'returns a string with the default parameter' do
+    it 'returns a string with the default parameter' do
       expect(lucky_number).to eq("Today's lucky number is 7")
     end
   end
