@@ -48,7 +48,8 @@ def ascii_code(character)
   if character.length !=1
     return "Input Error"
   end
-  
+  character.ord
+end
 
 
 # method name: #pet_pun
@@ -58,6 +59,17 @@ def ascii_code(character)
 # console output: if animal is 'dog', 'Dogs are paw-some!' (awesome)
 # console output: otherwise, "I think <animal>s have pet-tential!" (potential)
 # hint: use puts
+def pet_pun(animal)
+  if animal == 'cat'
+    puts 'Cats are purr-fect!'
+  elsif
+    animal == 'dog'
+      puts 'Dogs are paw-some!'
+    else
+      puts "I think #{animal}s have pet-tential!"
+    end
+end
+
 
 
 # method name: #twenty_first_century?
@@ -65,3 +77,10 @@ def ascii_code(character)
 # return value: true if the year is between 2001 - 2100, otherwise return false
 # hint: use Comparable#between?
 
+def twenty_first_century?(year)
+  if year.between?(2001, 2100)
+    return true
+  else
+    return false
+  end
+end
