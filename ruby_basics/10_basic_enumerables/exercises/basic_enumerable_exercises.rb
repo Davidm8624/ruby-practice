@@ -1,3 +1,5 @@
+# got it right but should review later cuz im still not aware of how it works, more like just folling patterns from the examples
+
 def display_current_inventory(inventory_list)
   # use #each to iterate through each item of the inventory_list (a hash)
   # use puts to output each list item "<key>, quantity: <value>" to console
@@ -18,11 +20,13 @@ end
 def find_absolute_values(numbers)
   # use #map to iterate through each item of the numbers (an array)
   # return an array of absolute values of each number
+  numbers.map { |number| number.abs }
 end
 
 def find_low_inventory(inventory_list)
   # use #select to iterate through each item of the inventory_list (a hash)
   # return a hash of items with values less than 4
+  inventory_list.select {|item, val| val < 4}
 end
 
 def find_word_lengths(word_list)

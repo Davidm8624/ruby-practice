@@ -42,13 +42,13 @@ RSpec.describe 'Basic Enumerable Exercises' do
 
   describe 'find absolute values exercise' do
     
-    xit 'returns an array of positive integers' do
+    it 'returns an array of positive integers' do
       numbers = [0, -7, 14, -21]
       result = [0, 7, 14, 21]
       expect(find_absolute_values(numbers)).to eq(result)
     end
 
-    xit 'returns an array of positive floating point numbers' do
+    it 'returns an array of positive floating point numbers' do
       numbers = [-3.14, 6.28, -9.42]
       result = [3.14, 6.28, 9.42]
       expect(find_absolute_values(numbers)).to eq(result)
@@ -57,13 +57,13 @@ RSpec.describe 'Basic Enumerable Exercises' do
 
   describe 'find low inventory exercise' do
     
-    xit 'returns a hash with integer values' do
+    it 'returns a hash with integer values' do
       fruit = { apples: 1, peaches: 4, bananas: 3, oranges: 7 }
       result = { apples: 1, bananas: 3 }
       expect(find_low_inventory(fruit)).to eq(result)
     end
 
-    xit 'returns a hash with floating point number values' do
+    it 'returns a hash with floating point number values' do
       cakes = { chocolate_cake: 2.5, vanilla_cake: 4.25, carrot_cake: 3.75 }
       result = { chocolate_cake: 2.5, carrot_cake: 3.75 }
       expect(find_low_inventory(cakes)).to eq(result)
