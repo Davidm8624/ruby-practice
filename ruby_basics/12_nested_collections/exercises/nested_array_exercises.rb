@@ -27,7 +27,7 @@ end
 def add_another_row(chart, row_to_add)
   # take a chart and add row_to_add to the end of the chart,
   # then return the chart.
-  chart[-1].push(row_to_add)
+  chart.push(row_to_add)
   chart
 end
 
