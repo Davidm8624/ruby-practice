@@ -27,12 +27,12 @@ RSpec.describe 'Nested Array Exercises' do
   describe 'add seat to row exercise' do
     let(:array) { [[nil, 'Bob', 'Joe'], [nil, nil, 'Bill']] }
 
-    xit "returns the array with 'Jack' added to the end of the second row" do
+    it "returns the array with 'Jack' added to the end of the second row" do
       expected_output = [[nil, 'Bob', 'Joe'], [nil, nil, 'Bill', 'Jack']]
       expect(add_seat_to_row(array, 1, 'Jack')).to eq(expected_output)
     end
 
-    xit "returns the array with 'Diane' added to the end of the first row" do
+    it "returns the array with 'Diane' added to the end of the first row" do
       expected_output = [[nil, 'Bob', 'Joe', 'Diane'], [nil, nil, 'Bill']]
       expect(add_seat_to_row(array, 0, 'Diane')).to eq(expected_output)
     end
@@ -41,12 +41,12 @@ RSpec.describe 'Nested Array Exercises' do
   describe 'add another row exercise' do
     let(:array) { [[nil, 'Bob', 'Joe'], [nil, nil, 'Bill']] }
 
-    xit "returns the array with ['Bo', nil, 'Kim'] added as a third row" do
+    it "returns the array with ['Bo', nil, 'Kim'] added as a third row" do
       expected_output = [[nil, 'Bob', 'Joe'], [nil, nil, 'Bill'], ['Bo', nil, 'Kim']]
       expect(add_another_row(array, ['Bo', nil, 'Kim'])).to eq(expected_output)
     end
 
-    xit "returns the array with ['Tim', 'Joe', nil] added as a third row" do
+    it "returns the array with ['Tim', 'Joe', nil] added as a third row" do
       expected_output = [[nil, 'Bob', 'Joe'], [nil, nil, 'Bill'], ['Tim', 'Joe', nil]]
       expect(add_another_row(array, ['Tim', 'Joe', nil])).to eq(expected_output)
     end
