@@ -51,13 +51,16 @@ def count_empty_seats(chart)
   # take a chart and return the number of empty (nil) seats in it
 
   # NOTE: `chart` should **not** be mutated
-  before = 0
-  after = 0
-  diff = 0
-  before = chart.length
-  after = chart.compact.length
-  diff = before - after
-  diff
+  # before = 0
+  # after = 0
+  # diff = 0
+  # before = chart.length
+  # after = chart.compact.length
+  # diff = before - after               tis way was a bit too stupid :P
+  # diff
+
+  chart.flatten.count(nil)          
+  # much better
 end
 
 def find_favorite(array_of_hash_objects)
