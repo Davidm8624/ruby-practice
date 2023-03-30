@@ -36,17 +36,28 @@ def delete_seat_from_row(chart, row_index, seat_index)
   # the chart, then return the chart
 
   # Hint: explore the ruby docs to find a method for deleting from an array!
+  chart[row_index].delete_at(seat_index)
+  chart
 end
 
 def delete_row_from_chart(chart, row_index)
   # take a chart and delete the row at row_index of the chart,
   # then return the chart
+  chart.delete_at(row_index)
+  chart
 end
 
 def count_empty_seats(chart)
   # take a chart and return the number of empty (nil) seats in it
 
   # NOTE: `chart` should **not** be mutated
+  before = 0
+  after = 0
+  diff = 0
+  before = chart.length
+  after = chart.compact.length
+  diff = before - after
+  diff
 end
 
 def find_favorite(array_of_hash_objects)
@@ -63,4 +74,26 @@ def find_favorite(array_of_hash_objects)
 
   # TIP: there will only be a maximum of one hash in the array that will
   # return true to the :is_my_favorite? key
+
+  # try #1 :(
+  # array_of_hash_objects.select{
+  #   |yay|
+  #   yay [:is_my_favorite?] = true
+  # }
+
+  # try 2
+  # array_of_hash_objects.all? do |hash|
+  #   hash.any? {
+  #     |hash| 
+  #   }
+
+  # try 3
+  # array_of_hash_objects.find {|hash| hash [:is_my_favorite] == "true"}
+
+  # was hella close ^
+
+  # try 4
+    array_of_hash_objects.find {|hash| hash [:is_my_favorite?]}
+
+
 end
